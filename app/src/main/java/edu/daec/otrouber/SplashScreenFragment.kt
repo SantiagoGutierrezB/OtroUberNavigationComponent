@@ -26,8 +26,14 @@ class SplashScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Handler().postDelayed({
+            /*
             context?.let {
                 findNavController().navigate(R.id.action_splashScreenFragment_to_mapaFragment, null,
+                    NavOptions.Builder().setPopUpTo(R.id.splashScreenFragment, true).build())
+            }
+            */
+            context?.let {
+                findNavController().navigate(R.id.action_splashScreenFragment_to_nav_home, null,
                     NavOptions.Builder().setPopUpTo(R.id.splashScreenFragment, true).build())
             }
         }, 2500)
